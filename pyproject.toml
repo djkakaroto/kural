@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "kural"
+version = "0.1.0"
+description = ""
+authors = ["Diego Lopes <djkakaroto@gmail.com>"]
+readme = "README.md"
+packages = [{include = "kural", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.scripts]
+kural = kural.main:app
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
