@@ -10,7 +10,17 @@ packages = [{include = "kural", from = "src"}]
 python = "^3.12"
 
 [tool.poetry.scripts]
-kural = kural.main:app
+kural = "kural.main:app"
+
+[tool.pytest]
+addopts = "--maxfail=1 --disable-warnings -q"
+
+[tool.poetry.group.dev.dependencies]  
+pytest = "^8.3"
+black = "*"
+ruff = "*" 
+isort = "*" 
+pytest-cov = "^5.0.0"
 
 [build-system]
 requires = ["poetry-core"]
